@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container1{
+            border:double;
+            text-align: center;
+            margin-left:auto;
+            margin-right: auto;
+            border: 2px solid;
+            padding: 10px 20px;
+            width: 500px;
+            border-radius: 25px;
+            font-display:inherit;
+            padding-top: 10px;
+            font-display:unset;
+            font-family: Georgia,serif;
+        }
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: underline, solid;
+        }
+        body{
+            background-image: url(images\logo.jpeg);
+            background-size: auto;
+        }
+        .background-image{
+            width: 600px;;
+            height: 200px;
+            display: block;
+            margin-top:auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-1 {
+            width: 100px;
+            height: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            }
+
+        .btn-1 {
+        border: 1px solid #010100;
+        padding: 15px;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        display:inline-block;
+        background-color:slategrey;
+        border-radius: 20px 20px 20px 20px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <img src="images\logo.jpeg" alt="ERROR" class="background-image">  
+    <div class="container1">
+        
+        <h1>REGISTER</h1>
+        <form action="register.php" method="post">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br></br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br></br>
+            <label for="confirm_password">Confirm Password:</label><br>
+            <input type="password" id="confirm_password" name="confirm_password" required><br></br>
+            <label for="role">Role:</label>
+            <input type="radio" name="role" value="student" required>&nbsp;Student |
+            <input type="radio" name="role" value="faculty" required>&nbsp;Faculty |
+            <input type="radio" name="role" value="admin" required>&nbsp;Admin <br></br>
+            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> Show Password<br>
+            <br>
+            <button type="submit" class="btn-1">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("password");
+            var confirmPasswordField = document.getElementById("confirm_password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                confirmPasswordField.type = "text";
+            } else {
+                passwordField.type = "password";
+                confirmPasswordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

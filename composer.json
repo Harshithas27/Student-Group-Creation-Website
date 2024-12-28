@@ -1,0 +1,21 @@
+{
+    "name": "sushma/phpspreadsheet",
+    "description": "Practice project for using PhpSpreadsheet.",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sushma\\Practice\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sushma S",
+            "email": "your-email@example.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "license": "MIT"
+}
